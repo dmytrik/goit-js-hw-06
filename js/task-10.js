@@ -3,6 +3,7 @@ function getRandomHexColor() {
 }
 
 const createBoxes = (amount) => {
+  destroyBoxes();
   let size = 30;
   for (let i = 0; i < amount; i += 1) {
     const el = document.createElement("div");

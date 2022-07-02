@@ -4,15 +4,21 @@ function getRandomHexColor() {
 
 const createBoxes = (amount) => {
   destroyBoxes();
+  boxes.append(...createElements(amount));
+};
+
+const createElements = (value) => {
   let size = 30;
-  for (let i = 0; i < amount; i += 1) {
+  const elements = [];
+  for (let i = 0; i < value; i += 1) {
     const el = document.createElement("div");
     el.style.width = `${size}px`;
     el.style.height = `${size}px`;
     el.style.backgroundColor = getRandomHexColor();
     size += 10;
-    boxes.append(el);
+    elements.push(el);
   }
+  return elements;
 };
 
 const destroyBoxes = () => {

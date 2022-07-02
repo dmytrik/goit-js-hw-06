@@ -1,13 +1,6 @@
-const searchElementByType = (type) => {
-  let el;
-  for (const element of elements) {
-    if (element.type === type) {
-      el = element;
-      return el;
-    }
-  }
-  return undefined;
-};
+const form = document.querySelector(".login-form");
+const email = form.email;
+const password = form.password;
 
 const formSubmit = (event) => {
   event.preventDefault();
@@ -22,10 +15,5 @@ const formSubmit = (event) => {
   };
   console.log(user);
 };
-
-const form = document.querySelector(".login-form");
-const elements = document.querySelector(".login-form").elements;
-const email = searchElementByType("email");
-const password = searchElementByType("password");
 
 form.addEventListener("submit", formSubmit);

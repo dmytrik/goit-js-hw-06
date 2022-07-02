@@ -14,4 +14,3 @@ const itemIngredients = ingredients.map((gradient) => {
   return item;
 });
 ingredientsList.append(...itemIngredients);
-console.log(ingredientsList);

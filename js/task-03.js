@@ -13,7 +13,7 @@ const images = [
   },
 ];
 
-const CreateImage = ({ url, alt }) => {
+const createImage = ({ url, alt }) => {
   // const item = document.createElement("li");
   // const img = document.createElement("img");
   // img.src = url;
@@ -23,6 +23,6 @@ const CreateImage = ({ url, alt }) => {
   return `<li><img src = ${url} alt = ${alt}></li>`;
 };
 
-const galleryItem = images.map(CreateImage).join("");
+const galleryItem = images.map(createImage).join("");
 const gallery = document.querySelector(".gallery");
 gallery.insertAdjacentHTML("beforeend", galleryItem);

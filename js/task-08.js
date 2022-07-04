@@ -9,7 +9,8 @@ const formSubmit = (event) => {
     console.clear();
     return;
   }
-
+  email.value = "";
+  password.value = "";
   const formData = new FormData(event.currentTarget);
   const user = {};
   formData.forEach((value, name) => {
